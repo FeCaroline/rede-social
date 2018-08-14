@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <!-- Initialize Firebase -->
+  <script>
+  var config = {
+    apiKey: "AIzaSyBmOCQcUQqtSCEjYDQXkkFCDaZedIEyWUs",
+    authDomain: "rede-social-5cd7a.firebaseapp.com",
+    databaseURL: "https://rede-social-5cd7a.firebaseio.com",
+    projectId: "rede-social-5cd7a",
+    storageBucket: "rede-social-5cd7a.appspot.com",
+    messagingSenderId: "775939239601"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+  <form>
+      <label>email</label>
+      <input class="sign-up-email" type="text" />
+      <label>senha</label>
+      <input class="sign-up-password" type="password" />
+      <button class="sign-up-button">Cadastrar</button>
+    </form>
 
-  </body>
+    <form>
+      <label>email</label>
+      <input class="sign-in-email" type="text" />
+      <label>senha</label>
+      <input class="sign-in-password" type="password" />
+      <button class="sign-in-button">Entrar</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+
+</body>
 </html>
