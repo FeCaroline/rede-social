@@ -34,13 +34,13 @@ body{
   border-radius: 5px;
 }
 h3{
-  font-size: 42px;
+  font-size: 36px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 input{
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 24px;
   background-color: transparent;
   border: black 3px solid;
   border-radius: 5px;
@@ -56,6 +56,6 @@ button{
   color: white;
   border-radius: 5px;
   border: black 2px solid;
-  font-size: 30px;
+  font-size: 24px;
   padding: 5px;
 }
