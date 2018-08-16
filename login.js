@@ -30,23 +30,30 @@ $(document).ready(function(event){
       alert(errorMessage);
     });
 
-  })
-  // $("#loginButton").click(function(event){
-  //   event.preventDefault();
-  //
-  //
-  //   var email = $("#passwordLogin").val();
-  //   var password = $("#emailLogin").val();
+  });
+})
+$(document).ready(function(event){
+  $("#loginButton").click(function(event){
+    event.preventDefault();
 
-  //   firebase.auth().signInWithEmailAndPassword(email, password)
-  //   .then(function(){
-  //     window.location="index.html";
-  //
-  //     .catch(function(error) {
-  //     // Handle Errors here.
-  //     var errorCode = error.code;
-  //     var errorMessage = error.message;
-  //     alert(errorMessage);
-  //
-  //   });
-});
+
+    var email = $("#emailLogin").val();
+    var password = $("#passwordLogin").val();
+
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(response){
+      var userId=response.user.uid;
+
+      window.location="index.html?userId=" + userId;
+    })
+    
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage);
+
+    });
+  });
+})
