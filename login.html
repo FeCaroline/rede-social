@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="login.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Snout Book</title>
-  </head>
-  <body>
-    <main class="grass">
-      <div class="conteiner-login">
-        <h3>Login</h3>
-        <input type="text" id="emailLogin" placeholder="e-mail">
-        <input type="password" id="passwordLogin" placeholder="senha">
-        <button type="button" id="loginButton">Entrar</button>
-        <br>
-        <h3>Cadastre-se</h3>
-        <input type="text" id="nameCad" placeholder="Nome">
-        <input type="text" id="emailCad" placeholder="E-mail">
-        <input type="password" id="passwordCad" placeholder="Senha">
-        <button type="button" id="cadButton">Cadastre-se</button>
-      </div>
-    </main>
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-    <script type="text/javascript" src="login.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Snout Book</title>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-auth.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script> var config = {
+    apiKey: "AIzaSyCCDmW8UvUpzHbPo7p-h0UcTcy8Nkm3SYk",
+    authDomain: "snout-book-lab.firebaseapp.com",
+    databaseURL: "https://snout-book-lab.firebaseio.com",
+    projectId: "snout-book-lab",
+    storageBucket: "snout-book-lab.appspot.com",
+    messagingSenderId: "179038112155"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+  <main class="grass">
+    <div class="conteiner-login">
+      <h3>Login</h3>
+      <input type="text" id="emailLogin" placeholder="e-mail">
+      <input type="password" id="passwordLogin" placeholder="senha">
+      <button type="button" id="loginButton">Entrar</button>
+      <br>
+      <h3>Cadastre-se</h3>
+      <input type="text" id="nameCad" placeholder="Nome">
+      <input type="text" id="emailCad" placeholder="E-mail">
+      <input type="password" id="passwordCad" placeholder="Senha">
+      <button type="button" class="cadButton">Cadastre-se</button>
+    </div>
+  </main>
+  <script type="text/javascript" src="login.js"></script>
+</body>
 </html>
