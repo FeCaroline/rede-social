@@ -34,11 +34,12 @@ $(document).ready(function() {
   });
 });
 function createPost(text, key){
-  $(".post-place").append('<li><span>"${text}"/span><button class="edit-post" data-edit-id="${key}"><i class="fas fa-edit"></i></button><button class="delete-post" data-delete-id="'"+key+"'"><i class="fas fa-trash-alt"></i></button></li>');
-  $("button[data-delete-id="'"+key+"'"]").click(function(){
-    console.log(text);
-  })
-  $(".edit-post").click(function(){
-    console.log("general");
-  })
+  console.log(key);
+  // $(".post-place").append('<li><span>${"text"}</span><button class="edit-post" data-edit-id="${key}"><i class="fas fa-edit"></i></button><button class="delete-post" data-delete-id="'"+key+"'"><i class="fas fa-trash-alt"></i></button></li>');
+  // $("button[data-delete-id="'"+key+"'"]").click(function(){
+  //   console.log(text);
+  // })
+  // $(".edit-post").click(function(){
+  //   console.log("general");
+  // })
 }
