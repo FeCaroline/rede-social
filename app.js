@@ -18,11 +18,13 @@ $(document).ready(function() {
     });
   })
 
-  database.ref('posts/' + USER_ID).once('value').then(function(snapshot) {
+  database.ref('posts').once('value').then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
-      var childKey = childSnapshot.key;
-      var childData = childSnapshot.val();
-      createPost(childData.text, childKey);
+      childSnapshot.forEach(function(item) {
+        var childKey = item.key;
+        var childData = item.val();
+        createPost(childData.text, childKey);
+      });
     });
   });
 
