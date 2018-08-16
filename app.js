@@ -6,7 +6,7 @@ $(document).ready(function() {
   database.ref("users/" + USER_ID).once("value")
   .then(function(snapshot) {
     var userInfo = snapshot.val();
-    $(".user-name").text(userInfo.name)
+    $(".user-name").text("Bem-vinda, " + userInfo.name + "!");
   })
 
   database.ref("users").once("value")
@@ -33,16 +33,24 @@ $(document).ready(function() {
     $(".input-post").val("");
 
     var newPostInDB = database.ref('posts/' + USER_ID).push({
-      text: text
+      text: text,
+      type : typePost
     });
 
     createPost(text, newPostInDB.key);
 
   })
 });
+var typePost = "public";
+$("public-post").click(function () {
+  typePost = "public";
+});
+$("friends-post").click(function () {
+  typePost = "friends";
+});
 
 function createPost(text, key) {
-  $(".post-place").append(`<li><span data-text-id="${key}" >${text}</span><button data-edit-id="${key}" >Editar</button><button data-delete-id="${key}" >Excluir</button></li>`);
+  $(".post-place").append(`<li class="content-li"><span data-text-id="${key}" >${text}</span><div class="buttons-edit"><button data-edit-id="${key}" ><i class="fas fa-edit"></i></button><button data-delete-id="${key}" ><i class="fas fa-trash-alt"></i></button></div></li>`);
 
   $(`button[data-delete-id=${key}]`).click(function() {
     $(this).parent().remove();
