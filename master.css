@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.conteiner-main{
+  display: flex;
+  width: 100%;
+  height:auto;
+  flex-direction: row;
+  /* position: absolute; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.conteiner-form{
+  width: 70%;
+  background-image: url("images/blueSky.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+.conteiner-seguir{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+}
+.input-post{
+  margin: 10px;
+  width: 90%;
+  height: auto;
+}
+button{
+  background: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+}
+li{
+  list-style: none;
+}
+.content-li{
+  padding: 20px;
+  background-color: rgba(255,255,255, 0.5);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.content-li span{
+  width: 80%;
+  font-size: 24px;
+}
+.buttons-edit{
+  width: 20%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 24px;
+}
+.buttons-edit button{
+  margin: 5px;
+}
+.type-button{
+  margin: 10px;
+  float: right;
+}
+.user-name{
+  font-size: 30px;
+  text-shadow:white -1px -1px;
+}
