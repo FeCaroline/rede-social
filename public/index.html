@@ -2,31 +2,66 @@
 <html lang="pt-br" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title> </title>
+  <title>Snout Book</title>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
-  <!-- Initialize Firebase -->
-  <script>
-  var config = {
-    apiKey: "AIzaSyBmOCQcUQqtSCEjYDQXkkFCDaZedIEyWUs",
-    authDomain: "rede-social-5cd7a.firebaseapp.com",
-    databaseURL: "https://rede-social-5cd7a.firebaseio.com",
-    projectId: "rede-social-5cd7a",
-    storageBucket: "rede-social-5cd7a.appspot.com",
-    messagingSenderId: "775939239601"
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+  <script> var config = {
+    apiKey: "AIzaSyCCDmW8UvUpzHbPo7p-h0UcTcy8Nkm3SYk",
+    authDomain: "snout-book-lab.firebaseapp.com",
+    databaseURL: "https://snout-book-lab.firebaseio.com",
+    projectId: "snout-book-lab",
+    storageBucket: "snout-book-lab.appspot.com",
+    messagingSenderId: "179038112155"
   };
   firebase.initializeApp(config);
 </script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Focinhos Club</h1>
-  <form>
-    <input class="post" type="text" name="" value=""/>
-    <button class="post-button" type="button" name="button">Enviar</button>
-  </form>
-  <ul class="user-posts"> </ul>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="app.js"></script>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Snout Book</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Feed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Friends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Log Out</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+      </form>
+    </div>
+  </nav>
+</header>
 
+<h1 class="user-name"></h1>
+<form>
+  <input type="text" class="input-post"/>
+  <button type="button" class="button-post">Post</button>
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <!-- <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-secondary public-post"><i class="fas fa-globe-americas"></i></button>
+    <button type="button" class="btn btn-secondary friends-post"><i class="fas fa-user-friends"></i></button>
+  </div> -->
+</div>
+</form>
+<ul class="post-place"></ul>
+<ul class="users-list"></ul>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 </html>
